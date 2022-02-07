@@ -1,0 +1,9 @@
+Motivasi saya dalam mengikuti bootcamp nodeJS ini yaitu:
+1. Mempelajari ilmu baru dalam software engineering
+2. Memperdalam keilmuan pekerjaan saya saat ini (Backend Engineer)
+3. Update terhadap kondisi market, walaupun saya seorang Backend Engineer Go, namun banyak perusahaan Indonesia
+yang memilih NodeJS dibanding Go dalam membangun Back End nya.
+
+Oleh karena itu, harapan saya setelah mengikuti bootcamp ini adalah mendapat ilmu yang bermanfaat untuk menunjang pekerjaan saya sebagai
+Back End Engineer. Apabila suatu saat saya mencari kesempatan baru di tempat lain, saya akan bisa cepat beradaptasi dan membuka kesempatan
+lain sebagai Back End Engineer tidak hanya dengan Go, tapi juga dengan NodeJS.
