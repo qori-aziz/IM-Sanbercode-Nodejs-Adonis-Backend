@@ -1,0 +1,6 @@
+Data Peserta Sanbercode Bootcamp Nodejs Adonis Backend
+1. Nama: Mohammad Qori Aziz Hakiki
+2. Email: muhamadqori@gmail.com
+3. Sistem Operasi yang digunakan: windows
+4. Akun Github: qori-aziz (gitlab juga menggunakan akun sama)
+5. Akun Telegram: @qori1999
