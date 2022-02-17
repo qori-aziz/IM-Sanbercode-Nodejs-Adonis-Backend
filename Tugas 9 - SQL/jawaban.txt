@@ -1,0 +1,62 @@
+Mohammad Qori Aziz Hakiki
+Tugas 9 Node Js : Berlatih SQL
+
+1. Buat Database dengan nama myshop
+
+create database myshop;
+
+2. Membuat tabel users, categories, dan items sesuai ketentuan
+
+ create table users(
+    -> id int primary key auto_increment,
+    -> name varchar(255),
+    -> email varchar(255),
+    -> password varchar(255)
+    -> );
+
+create table categories(
+    -> id int primary key auto_increment,
+    -> name varchar(255)
+    -> );
+
+create table items(
+    -> id int primary key auto_increment,
+    -> name varchar(255),
+    -> description varchar(255),
+    -> price int,
+    -> stock int,
+    -> category_id int,
+    -> foreign key(category_id) references categories(id)
+    -> );
+
+3. Memasukkan data yang sudah didefinisikan ke dalam tabel
+insert into users(name, email, password)
+    -> values("John Doe", "john@doe.com", "john123");
+insert into users(name, email, password)
+    -> values("Jane Doe", "jane@doe.com","jenita123");
+insert into categories(name)
+    -> value("gadget"), ("cloth"), ("men"), ("women"), ("branded");
+insert into items(name, description, price, stock, category_id)
+    -> values("Sumsang b50", "hape keren dari merek sumsang", 4000000,100,1),
+    -> ("Uniklooh", "baju keren dari brand ternama", 500000, 50, 2),
+    -> ("IMHO Watch", "jam tangan anak yang jujur banget", 2000000, 10, 1);
+
+4. Mengambil data pada database
+    a. Mengambil data users, menampilkan semua kecuali password
+    select id, name, email from users;
+
+    b. Mengambil data items
+        -Mendapat data items dengan harga diatas 1000000
+        select * from items where price>1000000;
+        -Mendapat data items dengan kata kunci uniklo, watch, atau sang(pilih salah satu
+        select * from items where name like '%sang%';
+    c. Mengambil data items join dengan kategori
+
+    select items.name, items.description,items.price, items.stock,items.category_id,categories.name from items
+    -> inner join categories on items.category_id=categories.id;
+
+5. Mengubah data pada database
+Ubah data harga pada item bernama sumsang b50 menjadi 2500000
+update items
+    -> set price = 2500000
+    -> where name= "Sumsang b50";
