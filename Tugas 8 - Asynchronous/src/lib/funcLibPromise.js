@@ -31,15 +31,46 @@ export const addSiswa = async (stringdata) => {
     let indexAdmin = realData.findIndex(item => (item.role == 'admin' && item.isLogin == true))
     if (indexAdmin != -1) {
         let indexTrainer = realData.findIndex(item => (item.name == trainername && item.role == 'trainer'))
-        realData[indexTrainer].students =[]
+        realData[indexTrainer].students = []
         let obj = {
-            name : studentname
+            name: studentname
         }
         realData[indexTrainer].students.push(obj)
         await fspromise.writeFile(path, JSON.stringify(realData))
         console.log("Berhasil add siswa")
     }
     else {
-        console.log ("Gagal add siswa")
+        console.log("Gagal add siswa")
     }
+}
+export const editData = async (update) => {
+    try {
+        let dataJson = await fspromise.readFile('data.json')
+        let data = JSON.parse(dataJson)
+        let updated = {...data, ...update}
+        await fspromise.writeFile('data.json', JSON.stringify(updated))
+        console.log("updated")
+    }
+    catch{
+        console.log(err)
+    }
+}
+const editData = (update) => {
+
+    fspromise.readFile('data.json')
+
+        .then(dataJson => {
+
+            let data = JSON.parse(dataJson)
+
+            let updated = { ...data, ...update }
+
+            return fspromise.writeFile('data.json', JSON.stringify(updated))
+
+        })
+
+        .then(() => console.log('updated'))
+
+        .catch(err => console.log(err))
+
 }
