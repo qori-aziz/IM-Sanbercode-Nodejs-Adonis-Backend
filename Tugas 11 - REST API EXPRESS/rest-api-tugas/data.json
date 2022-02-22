@@ -1,0 +1,1 @@
+[{"name":"Bondra","password":"12345","role":"admin","isLogin":true},{"name":"Qori","password":"tes","role":"admin","isLogin":false},{"name":"Qori1","password":"tes","role":"trainer","isLogin":false,"students":[{"name":"avs","kelas":"Adonis"},{"name":"avs","kelas":"Adonis"}]}]
