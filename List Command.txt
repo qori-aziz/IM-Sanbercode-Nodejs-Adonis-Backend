@@ -1,0 +1,17 @@
+Initialize REST API with Express JS
+npx express-generator --no-view
+
+Initialize sequelize inside Express JS
+npm install --save sequelize mysql2
+
+Install sequelize CLI and init
+npm install --save-dev sequelize-cli
+npx sequelize-cli init
+
+Create DB from config
+npx sequelize-cli db:create
+
+Create model and migration
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+npx sequelize-cli model:generate --name Venues --attributes name:string,address:string,phone:string
+
