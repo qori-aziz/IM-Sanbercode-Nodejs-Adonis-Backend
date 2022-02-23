@@ -13,5 +13,5 @@ npx sequelize-cli db:create
 
 Create model and migration
 npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
-npx sequelize-cli model:generate --name Venues --attributes name:string,address:string,phone:string
-
+npx sequelize-cli db:migrate
+npx sequelize-cli db:migrate:undo
