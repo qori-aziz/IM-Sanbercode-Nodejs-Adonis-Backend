@@ -28,6 +28,17 @@ Route.get('/testing', async () => {
 })
 
 //Release 0
-Route.post('/venues', 'VenuesController.create')
+// Route.post('/venues', 'VenuesController.create')
 //Release 1
 Route.post('/bookings', 'BookingsController.create')
+
+//Tugas 15
+//Release 0
+// Route.get('/venues', 'VenuesController.index')
+// Route.post('/venues', 'VenuesController.store')
+// Route.get('/venues/:id', 'VenuesController.show')
+// Route.put('/venues/:id', 'VenuesController.update')
+// Route.delete('/venues/:id', 'VenuesController.delete')
+
+Route.resource('venues', 'VenuesController')
+Route.resource('venues.fields', 'FieldsController')
