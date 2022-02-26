@@ -22,7 +22,12 @@ export default class GenresController {
   }
   public async show({ request, response }: HttpContextContract) {
     let genre = await Database.from('genres').select('*').where('id', request.param('id')) //If you dont make models
-    response.status(200).json({ message: `success get genre on id ${request.param('id')}`, genre })
+    genre[0].movies = await Database.from('movies')
+      .select('id', 'title', 'release_date', 'resume')
+      .where('genre_id', genre[0].id)
+    response
+      .status(200)
+      .json({ message: `success get genre on id ${request.param('id')}`, genre: genre[0] })
   }
 
   public async update({ request, response }: HttpContextContract) {
